@@ -7,7 +7,7 @@ const Feed: NextPage = () => {
   return (
     <div>
       <Header />
-      <div className='grid grid-cols-[270px_1fr] max-w-6xl gap-8 items-start mx-auto my-8 px-0 py-4 '>
+      <div className='grid grid-cols-1 md:grid-cols-[270px_1fr] max-w-6xl gap-8 items-start mx-auto my-8 px-0 py-4 '>
         <Sidebar />
         <main>
           <Post />
