@@ -13,6 +13,7 @@ const Feed: NextPage = () => {
           <Post />
           <Post />
           <Post />
+          {/* <WidgetAddPost /> */}
         </main>
       </div>
     </div>

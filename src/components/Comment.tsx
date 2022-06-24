@@ -1,7 +1,10 @@
 import { ThumbsUp, Trash } from 'phosphor-react';
+import { useState } from 'react';
 import { Avatar } from './Avatar';
+import { DialogDeleteCommet } from './DialogExcluir';
 
 export function Comment() {
+  const [isOpenExcluir, setIsOpenExcluir] = useState(false);
   return (
     <div className='flex mt-6 gap-4'>
       <Avatar hasBorder={false} src='https://github.com/nilosmferreira.png' />
@@ -20,6 +23,7 @@ export function Comment() {
             <button
               className='border-0 rounded text-gray-400 leading-[0] hover:text-red-400'
               title='Deletar comentário'
+              onClick={() => setIsOpenExcluir(true)}
             >
               <Trash size={20} />
             </button>
@@ -34,6 +38,10 @@ export function Comment() {
           </button>
         </footer>
       </div>
+      <DialogDeleteCommet
+        isOpen={isOpenExcluir}
+        onClose={() => setIsOpenExcluir(false)}
+      />
     </div>
   );
 }
